@@ -28,3 +28,17 @@ const header = document.querySelector("#header");
 window.addEventListener("scroll", () => {
     this.scrollY >= 50 ? header.classList.add("active") : header.classList.remove("active");
 });
+
+// swiper
+
+const servicesSwiper = new Swiper('.services__swiper', {
+    loop: true,
+    grabCursor: true,
+    spaceBetween: 24,
+    slidesPerView: "auto",
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    }
+});
