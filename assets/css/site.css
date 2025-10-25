@@ -624,6 +624,12 @@ img {
   justify-content: flex-end;
 }
 
+.products__link {
+  display: flex;
+  gap: var(--space-1);
+  align-items: center;
+}
+
 /* contact */
 
 .contact__info {
