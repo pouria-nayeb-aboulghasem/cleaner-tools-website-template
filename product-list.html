@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
 
     <!-- seo -->
     <title>لیست محصولات</title>
@@ -14,21 +15,357 @@
     <meta name="keywords" content="لیست محصول">
 
     <!-- styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/site.css">
+    <style>
+        .products {
+            background-color: var(--body-color);
+        }
+
+        .products__list {
+            padding-block: 3rem;
+        }
+
+        .products__item {
+            border-color: var(--text-color-light);
+        }
+    </style>
 </head>
 
 <body>
 
     <header id="header" class="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <i class="ri-building-3-line"></i>
+                <span>CleanerTools</span>
+            </a>
 
+            <div id="nav-menu" class="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link">
+                            خانه
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">
+                            درباره ما
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#category" class="nav__link">
+                            دسته بندی ها
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#products" class="nav__link">
+                            محصولات
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link button">
+                            تماس با ما
+                        </a>
+                    </li>
+                </ul>
+
+                <div id="nav-label" class="nav__label">
+                    <i class="ri-building-3-line"></i>
+                    <span>CleanerTools</span>
+                </div>
+
+                <div id="nav-close" class="nav__close">
+                    <i class="ri-close-large-line"></i>
+                </div>
+            </div>
+
+            <div id="nav-toggle" class="nav__toggle">
+                <i class="ri-apps-2-line"></i>
+            </div>
+        </nav>
     </header>
 
     <main id="main" class="main">
 
+        <div id="products" class="products section" data-section="products">
+            <div class="products__container container">
+                <div class="products__content">
+
+                    <header class="products__filter">
+                        <form class="products__form">
+                            <div class="products__actions">
+                                <div class="products__category">
+                                    <label for="category">دسته بندی ها:</label>
+                                    <select id="category" name="category">
+                                        <option value="all">همه</option>
+                                        <option value="vaccum">جاروبرقی صنعتی</option>
+                                        <option value="liquid">مایع پخش کن</option>
+                                    </select>
+                                </div>
+                                <div class="products__brand">
+                                    <label for="brand"> برندها:</label>
+                                    <select id="brand" name="brand">
+                                        <option value="all">همه</option>
+                                        <option value="vaccum">MTCO</option>
+                                        <option value="liquid">Philips</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="products__sort">
+                                <label for="sort">مرتب سازی:</label>
+                                <select id="sort" name="sort">
+                                    <option value="all">جدیدترین ها</option>
+                                    <option value="vaccum">گرانترین</option>
+                                    <option value="liquid">ارزان ترین</option>
+                                </select>
+                            </div>
+                        </form>
+                    </header>
+
+                    <ul class="products__list">
+                        <li class="products__item">
+                            <a href="#" class="products__links">
+                                <figure class="products__figure">
+                                    <img src="assets/imgs/products/product-img-1-prime.png" alt="" class="product__img">
+                                </figure>
+
+                                <div class="products__info">
+                                    <span>جارو برقی</span>
+                                    <h2 class="products__title">جاروبرقی 2100 وات</h2>
+                                    <!-- <span class="products__date">2 بهمن 1405</span> -->
+                                    <p>جاروبرقی صنعتی با برند MTCO و توان 2100 واتی مناسب کارخانجات و صنایع</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="products__item">
+                            <a href="#" class="products__links">
+                                <figure class="products__figure">
+                                    <img src="assets/imgs/products/product-img-2-prime.png" alt=""
+                                        class="products__img">
+                                </figure>
+
+                                <div class="products__info">
+                                    <span>جارو برقی</span>
+                                    <h2 class="products__title">جاروبرقی 2100 وات</h2>
+                                    <!-- <span class="products__date">2025 june 14</span> -->
+                                    <p>جاروبرقی صنعتی با برند MTCO و توان 2100 واتی مناسب کارخانجات و صنایع</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="products__item">
+                            <a href="#" class="products__links">
+                                <figure class="products__figure">
+                                    <img src="assets/imgs/products/product-img-3-prime.png" alt=""
+                                        class="products__img">
+                                </figure>
+
+                                <div class="products__info">
+                                    <span>جارو برقی</span>
+                                    <h2 class="products__title">جاروبرقی 2100 وات</h2>
+                                    <!-- <span class="products__date">2025 june 14</span> -->
+                                    <p>جاروبرقی صنعتی با برند MTCO و توان 2100 واتی مناسب کارخانجات و صنایع</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="products__item">
+                            <a href="#" class="products__links">
+                                <figure class="products__figure">
+                                    <img src="assets/imgs/products/product-img-1-prime.png" alt="" class="product__img">
+                                </figure>
+
+                                <div class="products__info">
+                                    <span>جارو برقی</span>
+                                    <h2 class="products__title">جاروبرقی 2100 وات</h2>
+                                    <!-- <span class="products__date">2 بهمن 1405</span> -->
+                                    <p>جاروبرقی صنعتی با برند MTCO و توان 2100 واتی مناسب کارخانجات و صنایع</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="products__item">
+                            <a href="#" class="products__links">
+                                <figure class="products__figure">
+                                    <img src="assets/imgs/products/product-img-2-prime.png" alt=""
+                                        class="products__img">
+                                </figure>
+
+                                <div class="products__info">
+                                    <span>جارو برقی</span>
+                                    <h2 class="products__title">جاروبرقی 2100 وات</h2>
+                                    <!-- <span class="products__date">2025 june 14</span> -->
+                                    <p>جاروبرقی صنعتی با برند MTCO و توان 2100 واتی مناسب کارخانجات و صنایع</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="products__item">
+                            <a href="#" class="products__links">
+                                <figure class="products__figure">
+                                    <img src="assets/imgs/products/product-img-3-prime.png" alt=""
+                                        class="products__img">
+                                </figure>
+
+                                <div class="products__info">
+                                    <span>جارو برقی</span>
+                                    <h2 class="products__title">جاروبرقی 2100 وات</h2>
+                                    <!-- <span class="products__date">2025 june 14</span> -->
+                                    <p>جاروبرقی صنعتی با برند MTCO و توان 2100 واتی مناسب کارخانجات و صنایع</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="products__item">
+                            <a href="#" class="products__links">
+                                <figure class="products__figure">
+                                    <img src="assets/imgs/products/product-img-1-prime.png" alt="" class="product__img">
+                                </figure>
+
+                                <div class="products__info">
+                                    <span>جارو برقی</span>
+                                    <h2 class="products__title">جاروبرقی 2100 وات</h2>
+                                    <!-- <span class="products__date">2 بهمن 1405</span> -->
+                                    <p>جاروبرقی صنعتی با برند MTCO و توان 2100 واتی مناسب کارخانجات و صنایع</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="products__item">
+                            <a href="#" class="products__links">
+                                <figure class="products__figure">
+                                    <img src="assets/imgs/products/product-img-2-prime.png" alt=""
+                                        class="products__img">
+                                </figure>
+
+                                <div class="products__info">
+                                    <span>جارو برقی</span>
+                                    <h2 class="products__title">جاروبرقی 2100 وات</h2>
+                                    <!-- <span class="products__date">2025 june 14</span> -->
+                                    <p>جاروبرقی صنعتی با برند MTCO و توان 2100 واتی مناسب کارخانجات و صنایع</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="products__item">
+                            <a href="#" class="products__links">
+                                <figure class="products__figure">
+                                    <img src="assets/imgs/products/product-img-3-prime.png" alt=""
+                                        class="products__img">
+                                </figure>
+
+                                <div class="products__info">
+                                    <span>جارو برقی</span>
+                                    <h2 class="products__title">جاروبرقی 2100 وات</h2>
+                                    <!-- <span class="products__date">2025 june 14</span> -->
+                                    <p>جاروبرقی صنعتی با برند MTCO و توان 2100 واتی مناسب کارخانجات و صنایع</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="pagination">
+                        <ul class="pagination__list">
+                            <li class="pagination__item">
+                                <a href="#" class="pagination__link">
+                                    <i class="ri-arrow-right-double-line"></i>
+                                </a>
+                            </li>
+
+                            <li class="pagination__item">
+                                <a href="#" class="pagination__link active">1</a>
+                            </li>
+                            <li class="pagination__item">
+                                <a href="#" class="pagination__link">2</a>
+                            </li>
+                            <li class="pagination__item">
+                                <a href="#" class="pagination__link">3</a>
+                            </li>
+
+                            <li class="pagination__item">
+                                <a href="#" class="pagination__link">
+                                    <i class="ri-arrow-left-double-line"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <footer id="footer" class="footer">
+        <div class="footer__container container">
+            <div>
+                <a href="#" class="footer__logo">
+                    <i class="ri-building-3-line"></i>
+                    <span>CleanerTools</span>
+                </a>
 
+                <p class="footer__description">
+                    ما با خدمات با کیفیت به دنبال جلب رضایت مشتریان هستیم.
+                </p>
+
+                <address class="footer__email">
+                    <h6>پست الکترونیک:</h6>
+                    <p>info[at]CleanerTools.com</p>
+                </address>
+            </div>
+            <div class="footer__content">
+                <div>
+                    <h3 class="footer__title">شرکت</h3>
+
+                    <ul class="footer__links">
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">درباره ما</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">خدمات</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">محصولات</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer__title">اطلاعات</h3>
+
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <address class="footer__address">تهران - خیابان امام خمینی</address>
+                        </li>
+                        <li class="footer__item">
+                            <address class="footer__address">9 صبح تا 18 عصر</address>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer__title">شبکه های اجتماعی</h3>
+
+                    <nav class="footer__social">
+                        <a href="#">
+                            <i class="ri-whatsapp-line"></i>
+                        </a>
+                        <a href="#">
+                            <i class="ri-telegram-line"></i>
+                        </a>
+                        <a href="#">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__copyright">
+            &#169; تمام حقوق مادی و معنوی سایت
+            <a href="#">CleanerTools</a>
+            محفوط است
+        </div>
     </footer>
 
     <!-- scripts -->
