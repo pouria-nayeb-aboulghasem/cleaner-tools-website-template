@@ -7,32 +7,380 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
 
     <!-- seo -->
-    <title>نام محصول</title>
-    <meta name="description" content="توضیحات محصول">
-    <meta name="keywords" content="نام محصول، دسته بندی محصول">
+    <title>لیست محصولات</title>
+    <meta name="description" content="توضیحات محصولات">
+    <meta name="keywords" content="لیست محصول">
 
     <!-- styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/site.css">
 </head>
 
 <body>
 
     <header id="header" class="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">
+                <i class="ri-building-3-line"></i>
+                <span>CleanerTools</span>
+            </a>
 
+            <div id="nav-menu" class="nav__menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html#home" class="nav__link">
+                            خانه
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="index.html#about" class="nav__link">
+                            درباره ما
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="index.html#category" class="nav__link">
+                            دسته بندی ها
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="product-list.html" class="nav__link">
+                            محصولات
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="index.html#contact" class="nav__link button">
+                            تماس با ما
+                        </a>
+                    </li>
+                </ul>
+
+                <div id="nav-label" class="nav__label">
+                    <i class="ri-building-3-line"></i>
+                    <span>CleanerTools</span>
+                </div>
+
+                <div id="nav-close" class="nav__close">
+                    <i class="ri-close-large-line"></i>
+                </div>
+            </div>
+
+            <div id="nav-toggle" class="nav__toggle">
+                <i class="ri-apps-2-line"></i>
+            </div>
+        </nav>
     </header>
 
     <main id="main" class="main">
 
+        <div id="product" class="product section">
+            <div class="product__container container">
+                <div class="product__content">
+
+                    <section class="product__info">
+
+                        <header class="product__header">
+                            <figure class="product__figure">
+                                <img src="assets/imgs/products/SWR-70WG.jpg" alt="" class="product__img">
+
+                                <div class="product__gallery">
+                                    <img src="assets/imgs/products/SWR-70WG.jpg" alt=""
+                                        class="product__thumbnail active">
+                                    <img src="assets/imgs/products/SWR-70WG-Slide1.jpg" alt=""
+                                        class="product__thumbnail">
+                                    <img src="assets/imgs/products/SWR-70WG-Slide2.jpg" alt=""
+                                        class="product__thumbnail">
+                                </div>
+                            </figure>
+
+                            <div class="product__data">
+                                <h1 class="product__title">سوییپر اسکرابر دستی SWR-70WG</h1>
+                                <p class="product__description">
+                                    اگر به دنبال سوییپری هستید که علاوه بر جارو زدن و جمع‌آوری زباله‌ها، به صورت همزمان
+                                    عملیات شستشو را هم انجام دهد، سوییپر اسکرابر دستی SWR-70WG بهترین گزینه است. این
+                                    دستگاه به واسطه مجهز بودن به دو برس رولی، زباله‌های موجود بر روی سطوح را جمع‌آوری
+                                    کرده سپس عملیات ریزش آب، برس‌زنی، تی‌کشی و مکش آب کثیف را انجام می‌دهد.
+                                </p>
+                                <div class="product__grid">
+                                    <div class="product__id">
+                                        <span>شناسه:</span>
+                                        <span>10002070</span>
+                                    </div>
+                                    <div class="product__category">
+                                        <span>دسته بندی:</span>
+                                        <nav>
+                                            <a href="#">سوییپر</a>
+                                        </nav>
+                                    </div>
+                                    <div class="product__tags">
+                                        <span>برچسب ها:</span>
+                                        <nav>
+                                            <a href="#">تجهیزات نظافت صنعتی</a>
+                                            <a href="#">سوییپر</a>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+
+                        <div class="tab">
+                            <button class="tab__link active" onclick="openCity(event, 'description')">توضیحات</button>
+                            <button class="tab__link" onclick="openCity(event, 'technical')">مشخصات فنی</button>
+                            <button class="tab__link" onclick="openCity(event, 'catalog')">کاتالوگ</button>
+                        </div>
+
+                        <div id="description" class="tab__content" style="display:block">
+                            <h3>توضیحات</h3>
+                            <p>اگر به دنبال یک جاروی صنعتی هستید که همزمان با جارو زدن و جمع‌آوری زباله‌های خشک بتواند
+                                عملیات شستشو و تی‌کشی سطوح را هم انجام دهد، سوییپر اسکرابر دستی SWR-70WG بهترین گزینه
+                                است. در صورت نیاز به دستگاهی که فقط عملیات جارو زدن و جمع‌آوری زباله‌های خشک را انجام
+                                دهد، می‌توانید صفحه مربوط به سوییپر سرنشین دار SWR-1000 را بررسی کنید.
+                            </p>
+                            <p>
+                                این دستگاه سوییپر صنعتی حین عبور از سطوح، ابتدا با استفاده از برس رولی که دارد زباله‌های
+                                موجود در مسیر را مکش کرده و در مخزن زباله‌اش جمع‌آوری می‌کند. در همین حین عملیات ریزش آب
+                                و برس‌زنی را آغاز کرده و پس از جدا کردن جرم و آلودگی سطوح، آب کثیف را به سمت تیغه‌های
+                                پلاستیکی تی هدایت کرده و از آن‌جا توسط مکنده‌ای به مخزن آب کثیف مکش می‌شود.
+                            </p>
+                            <p>
+                                برس‌های استفاده شده در این دستگاه از نوع سیلندری بوده که با سرعت 650 دور در دقیقه به
+                                چرخش درآمده و با فشار 50 کیلوگرم، سطوح موردنظر را جارو زده و شستشو می‌دهند.
+                            </p>
+
+                            <h3>ویژگی‌های دستگاه سوییپر اسکرابر SWR-70W</h3>
+
+                            <ul>
+                                <li>دارای کامپیوتر مرکزی به منظور کنترل میزان چرخش برس و وکیوم</li>
+                                <li>دارای قدرت مانور بی‌نظیر و عملکرد مناسب در فضای محدود به منظور چرخش درجا</li>
+                                <li>مجهز به سیستم کنترل مرکزی به منظور حفظ سلامت دستگاه در زمان زیر فشار</li>
+                                <li>دارای شاسی فولادیِ تولید شده به صورت تمام رباتیک</li>
+                                <li>دارای بدنه‌ای از جنس پلی‌اتیلن و مقاوم در برابر ضربه</li>
+                                <li>دارای نشانگر میزان آب تمیز و سنسور تشخیص میزان آب کثیف</li>
+                                <li>دارای تیغه‌های لاستیکی تی با قابلیت استفاده از چهار لبه</li>
+                                <li>دارای امکان استفاده از مواد شوینده در مخزن آب تمیز</li>
+                            </ul>
+                        </div>
+
+                        <div id="technical" class="tab__content">
+                            <h3>مشخصات فنی</h3>
+
+                            <table>
+                                <tr>
+                                    <th>برند</th>
+                                    <td>Gaomei</td>
+                                </tr>
+                                <tr>
+                                    <th>استاندارد</th>
+                                    <td>CE</td>
+                                </tr>
+                                <tr>
+                                    <th>استاندارد بهداشتی</th>
+                                    <td>HACCP</td>
+                                </tr>
+                                <tr>
+                                    <th>نوع هدایت</th>
+                                    <td>دستی</td>
+                                </tr>
+                                <tr>
+                                    <th>نوع موتور</th>
+                                    <td>الکتریکی/باتری</td>
+                                </tr>
+                                <tr>
+                                    <th>توان موتور درایو</th>
+                                    <td>400 وات</td>
+                                </tr>
+                                <tr>
+                                    <th>تعداد باتری</th>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <th>ظرفیت باتری</th>
+                                    <td>120 آمپر ساعت</td>
+                                </tr>
+                                <tr>
+                                    <th>زمان شارژدهی</th>
+                                    <td>3 ساعت</td>
+                                </tr>
+                                <tr>
+                                    <th>گارانتی/ خدمات </th>
+                                    <td>14 ماه/ 16 سال</td>
+                                </tr>
+                            </table>
+
+                        </div>
+
+                        <div id="catalog" class="tab__content">
+                            <h3>کاتالوگ</h3>
+                            <p>جهت دریافت فایل کاتالوگ
+                                <a href="#">اینجا</a>
+                                کلیک کنید.
+                            </p>
+                        </div>
+
+                    </section>
+
+                    <div id="related" class="related" data-section="related">
+                        <div class="related__container container">
+                            <div class="related__content">
+                                <h2 class="related__title">محصولات مرتبط</h2>
+
+                                <ul class="related__list">
+                                    <li class="related__item">
+                                        <a href="#" class="related__links">
+                                            <figure class="related__figure">
+                                                <img src="assets/imgs/products/product-img-1-prime.png" alt=""
+                                                    class="related__img">
+                                            </figure>
+
+                                            <div class="related__info">
+                                                <span>جارو برقی</span>
+                                                <h2 class="related__title">جاروبرقی 2100 وات</h2>
+                                                <!-- <span class="related__date">2 بهمن 1405</span> -->
+                                                <p>جاروبرقی صنعتی با برند MTCO و توان 2100 واتی مناسب کارخانجات و صنایع
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="related__item">
+                                        <a href="#" class="related__links">
+                                            <figure class="related__figure">
+                                                <img src="assets/imgs/products/product-img-2-prime.png" alt=""
+                                                    class="related__img">
+                                            </figure>
+
+                                            <div class="related__info">
+                                                <span>جارو برقی</span>
+                                                <h2 class="related__title">جاروبرقی 2100 وات</h2>
+                                                <!-- <span class="related__date">2025 june 14</span> -->
+                                                <p>جاروبرقی صنعتی با برند MTCO و توان 2100 واتی مناسب کارخانجات و صنایع
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="related__item">
+                                        <a href="#" class="related__links">
+                                            <figure class="related__figure">
+                                                <img src="assets/imgs/products/product-img-3-prime.png" alt=""
+                                                    class="related__img">
+                                            </figure>
+
+                                            <div class="related__info">
+                                                <span>جارو برقی</span>
+                                                <h2 class="related__title">جاروبرقی 2100 وات</h2>
+                                                <!-- <span class="related__date">2025 june 14</span> -->
+                                                <p>جاروبرقی صنعتی با برند MTCO و توان 2100 واتی مناسب کارخانجات و صنایع
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <footer id="footer" class="footer">
+        <div class="footer__container container">
+            <div>
+                <a href="#" class="footer__logo">
+                    <i class="ri-building-3-line"></i>
+                    <span>CleanerTools</span>
+                </a>
 
+                <p class="footer__description">
+                    ما با خدمات با کیفیت به دنبال جلب رضایت مشتریان هستیم.
+                </p>
+
+                <address class="footer__email">
+                    <h6>پست الکترونیک:</h6>
+                    <p>info[at]CleanerTools.com</p>
+                </address>
+            </div>
+            <div class="footer__content">
+                <div>
+                    <h3 class="footer__title">شرکت</h3>
+
+                    <ul class="footer__links">
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">درباره ما</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">خدمات</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link">محصولات</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer__title">اطلاعات</h3>
+
+                    <ul class="footer__list">
+                        <li class="footer__item">
+                            <address class="footer__address">تهران - خیابان امام خمینی</address>
+                        </li>
+                        <li class="footer__item">
+                            <address class="footer__address">9 صبح تا 18 عصر</address>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer__title">شبکه های اجتماعی</h3>
+
+                    <nav class="footer__social">
+                        <a href="#">
+                            <i class="ri-whatsapp-line"></i>
+                        </a>
+                        <a href="#">
+                            <i class="ri-telegram-line"></i>
+                        </a>
+                        <a href="#">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__copyright">
+            &#169; تمام حقوق مادی و معنوی سایت
+            <a href="#">CleanerTools</a>
+            محفوط است
+        </div>
     </footer>
 
     <!-- scripts -->
     <script src="assets/js/site.js"></script>
+    <script>
+        const productImg = document.querySelector(".product__img");
+        const productThumbnails = document.querySelectorAll(".product__thumbnail");
+
+        productThumbnails.forEach(productThumbnail => {
+            productThumbnail.addEventListener("click", () => {
+                productImg.src = productThumbnail.src;
+                resetActiveClassInProductThumbnails();
+                productThumbnail.classList.add("active");
+            });
+        });
+
+        function resetActiveClassInProductThumbnails() {
+            productThumbnails.forEach(productThumbnail => {
+                productThumbnail.classList.remove("active");
+            });
+        }
+    </script>
 </body>
 
 </html>
